@@ -11,3 +11,7 @@ console.log(set);
 //add(), delete(), has()
 console.log(set.has(obj));
 console.log(set.delete());
+
+//add other elements to weakSet it produces an error
+set.add("Hello!");
+console.log(set);
