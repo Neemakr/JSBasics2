@@ -15,13 +15,18 @@ const person = {
     [i] : 123
 }
 console.log(person);
-//console.log(person.[i]);
+console.log(person[i]);
 console.log(person.name);
 
-//Symbols are not included in for..in loop
+//Symbols are not included in for..in loop - it doesn't iterate
 for(let i in person){
     console.log(person[i]);
 }
+
+//Unique value
+const x = Symbol('Hi');
+const y = Symbol('Hi');
+console.log(x === y);
 
 //Methods
 let sm1 = Symbol.for('Hello');
@@ -37,8 +42,9 @@ const Person = {
     name : "John",
     age : 24
 }
+//Add symbol as a key
 Person[id] = 'Hi';
-console.log(Person.id);
+console.log(Person[id]);
 
 const PErson = {
     s1 : Symbol('Minor'),
